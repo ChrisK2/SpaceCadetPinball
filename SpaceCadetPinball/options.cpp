@@ -86,13 +86,13 @@ void options::InitPrimary()
 	GetInput("Bottom Table Bump key", Options.Key.BottomTableBump);
 
 	Options.Sounds = get_int("Sounds", true);
-	Options.Music = get_int("Music", false);
+	Options.Music = get_int("Music", true);
 	Options.FullScreen = get_int("FullScreen", false);
 	Options.Players = get_int("Players", 1);
 	Options.UniformScaling = get_int("Uniform scaling", true);
 	ImGui::GetIO().FontGlobalScale = get_float("UI Scale", 1.0f);
 	Options.Resolution = get_int("Screen Resolution", -1);
-	Options.LinearFiltering = get_int("Linear Filtering", true);
+	Options.LinearFiltering = get_int("Linear Filtering", false);
 	Options.FramesPerSecond = Clamp(get_int("Frames Per Second", DefFps), MinFps, MaxFps);
 	Options.UpdatesPerSecond = Clamp(get_int("Updates Per Second", DefUps), MinUps, MaxUps);
 	Options.UpdatesPerSecond = std::max(Options.UpdatesPerSecond, Options.FramesPerSecond);
@@ -101,7 +101,7 @@ void options::InitPrimary()
 	Options.SoundChannels = Clamp(get_int("Sound Channels", DefSoundChannels), MinSoundChannels, MaxSoundChannels);
 	Options.HybridSleep = get_int("HybridSleep", false);
 	Options.Prefer3DPBGameData = get_int("Prefer 3DPB Game Data", false);
-	Options.IntegerScaling = get_int("Integer Scaling", false);
+	Options.IntegerScaling = get_int("Integer Scaling", true);
 	Options.SoundVolume = Clamp(get_int("Sound Volume", DefVolume), MinVolume, MaxVolume);
 	Options.MusicVolume = Clamp(get_int("Music Volume", DefVolume), MinVolume, MaxVolume);
 }
