@@ -43,7 +43,7 @@ std::map<uint32_t, LPCSTR> rc_strings
 	{35, "TILT!"},
 	{36, "This program requires an 80386 or later CPU."},
 	{37, "80386 Required"},
-	{38, "3D Pinball for Windows - Space Cadet"},
+	{38, "3D Pinball - Space Cadet"},
 	{
 		39,
 		"One or more of the player controls is set to the same key,\nfor best performance use unique keys for each control."
