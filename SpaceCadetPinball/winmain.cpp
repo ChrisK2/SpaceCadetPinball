@@ -59,6 +59,9 @@ int winmain::WinMain(LPCSTR lpCmdLine)
 		return 1;
 	}
 
+	// Load support file for more game controllers
+	SDL_GameControllerAddMappingsFromFile("gamecontrollerdb.txt");
+
 	pinball::quickFlag = strstr(lpCmdLine, "-quick") != nullptr;
 
 	// SDL window
